@@ -20,6 +20,8 @@ app.use("/api/upload", uploadRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/house", houseRoutes);
 
-app.listen(process.env.PORT, () => {
-  console.log("Server started");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log("Server started on", PORT);
 });
